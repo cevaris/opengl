@@ -1,28 +1,5 @@
-<<<<<<< HEAD
 *.xcworkspacedata
 *.xcuserstate
 
 *.swp
-=======
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
->>>>>>> cf27e3baccb279449350142f38b7d5537cb7c194
