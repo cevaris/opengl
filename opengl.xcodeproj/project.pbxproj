@@ -11,6 +11,9 @@
 		46EEAE9819B4F83A0058B6E4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46EEAE9619B4F83A0058B6E4 /* main.cpp */; };
 		46EEAE9A19B4F85B0058B6E4 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EEAE9919B4F85B0058B6E4 /* GLUT.framework */; };
 		46EEAE9C19B4F8610058B6E4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EEAE9B19B4F8610058B6E4 /* OpenGL.framework */; };
+		46EEAEAA19B501270058B6E4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EEAE9B19B4F8610058B6E4 /* OpenGL.framework */; };
+		46EEAEAB19B5012E0058B6E4 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EEAE9919B4F85B0058B6E4 /* GLUT.framework */; };
+		46EEAEAD19B501620058B6E4 /* gears.c in Sources */ = {isa = PBXBuildFile; fileRef = 46EEAEAC19B501620058B6E4 /* gears.c */; settings = {COMPILER_FLAGS = "-framework OpenGL -framework GLUT -Wno-deprecated"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +35,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		46EEAE9F19B500E80058B6E4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +54,8 @@
 		46EEAE9719B4F83A0058B6E4 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		46EEAE9919B4F85B0058B6E4 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		46EEAE9B19B4F8610058B6E4 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		46EEAEA119B500E80058B6E4 /* gears */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gears; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EEAEAC19B501620058B6E4 /* gears.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gears.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +75,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46EEAE9E19B500E80058B6E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EEAEAB19B5012E0058B6E4 /* GLUT.framework in Frameworks */,
+				46EEAEAA19B501270058B6E4 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -71,6 +94,7 @@
 				46EEAE9919B4F85B0058B6E4 /* GLUT.framework */,
 				46EEAE7D19B4F7510058B6E4 /* opengl */,
 				46EEAE8C19B4F7820058B6E4 /* example5 */,
+				46EEAEA219B500E80058B6E4 /* gears */,
 				46EEAE7C19B4F7510058B6E4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +104,7 @@
 			children = (
 				46EEAE7B19B4F7510058B6E4 /* opengl */,
 				46EEAE8B19B4F7820058B6E4 /* example5 */,
+				46EEAEA119B500E80058B6E4 /* gears */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +124,14 @@
 				46EEAE9419B4F7C70058B6E4 /* ex5.cpp */,
 			);
 			path = example5;
+			sourceTree = "<group>";
+		};
+		46EEAEA219B500E80058B6E4 /* gears */ = {
+			isa = PBXGroup;
+			children = (
+				46EEAEAC19B501620058B6E4 /* gears.c */,
+			);
+			path = gears;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +171,23 @@
 			productReference = 46EEAE8B19B4F7820058B6E4 /* example5 */;
 			productType = "com.apple.product-type.tool";
 		};
+		46EEAEA019B500E80058B6E4 /* gears */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46EEAEA719B500E80058B6E4 /* Build configuration list for PBXNativeTarget "gears" */;
+			buildPhases = (
+				46EEAE9D19B500E80058B6E4 /* Sources */,
+				46EEAE9E19B500E80058B6E4 /* Frameworks */,
+				46EEAE9F19B500E80058B6E4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gears;
+			productName = gears;
+			productReference = 46EEAEA119B500E80058B6E4 /* gears */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,6 +211,7 @@
 			targets = (
 				46EEAE7A19B4F7510058B6E4 /* opengl */,
 				46EEAE8A19B4F7820058B6E4 /* example5 */,
+				46EEAEA019B500E80058B6E4 /* gears */,
 			);
 		};
 /* End PBXProject section */
@@ -179,6 +230,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EEAE9519B4F7C70058B6E4 /* ex5.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EEAE9D19B500E80058B6E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EEAEAD19B501620058B6E4 /* gears.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +346,24 @@
 			};
 			name = Release;
 		};
+		46EEAEA819B500E80058B6E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		46EEAEA919B500E80058B6E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -312,6 +389,14 @@
 			buildConfigurations = (
 				46EEAE9219B4F7820058B6E4 /* Debug */,
 				46EEAE9319B4F7820058B6E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		46EEAEA719B500E80058B6E4 /* Build configuration list for PBXNativeTarget "gears" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46EEAEA819B500E80058B6E4 /* Debug */,
+				46EEAEA919B500E80058B6E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>gears.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>opengl.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>46EEAE8A19B4F7820058B6E4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>46EEAEA019B500E80058B6E4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
